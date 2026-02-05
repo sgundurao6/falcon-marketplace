@@ -1,0 +1,20 @@
+---
+name: investigate
+description: Fetches DB logs and analyzes code to find root causes.
+argument-hint: [error_code]
+---
+
+# Skill: Drift Detector
+1. Run this when /drift command is supplied.
+2. Falcon instance for all cases is aws-esvc1-useast2 and functional domain is monitoring.
+3. Generate configs for the above environment using the configs stored locally in the repo.
+4. Compare locally generated configs against the one downloaded from the cluster. File Name: aws-esvc1-useast2-monitoring.txt
+5. Produce a report focussing on the difference. Provide a high level overview on matches, no details required.
+6. Feel free to switch profiles if more investigation is required
+
+
+# Skill: Environment readiness
+1. Run this when /release-check is supplied.
+2. For the supplied falcon instance and functional domain, use the prompt: Is the environment ready for the cloudwatch pipeline to complete successfully?
+3. Provide a report focussing on the problems, potential fix and unit tests. Provide a high level overview on the checks, no details required.
+4. Feel free to switch profiles if more investigation is required.
